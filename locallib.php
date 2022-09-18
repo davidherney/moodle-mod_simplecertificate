@@ -1155,11 +1155,11 @@ class simplecertificate {
         $codeurl = new moodle_url("$CFG->wwwroot/mod/simplecertificate/verify.php");
         $codeurl->param('code', $code);
 
-        $pdf->write2DBarcode($codeurl->out(false), 'QRCODE,M', $this->get_instance()->codex, $this->get_instance()->codey, 50, 50,
+        $pdf->write2DBarcode($codeurl->out(false), 'QRCODE,M', $this->get_instance()->codex, $this->get_instance()->codey, 30, 30,
                             $style, 'N');
-        $pdf->SetXY($this->get_instance()->codex, $this->get_instance()->codey + 49);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(50, 0, $code, 'LRB', 0, 'C', true, '', 2);
+        $pdf->SetXY($this->get_instance()->codex, $this->get_instance()->codey + 35);
+        $pdf->SetFillColor(246, 247, 248);
+        $pdf->Cell(30, 0, $code, 0, 0, 'C', true, '', 2);
     }
 
     /**
